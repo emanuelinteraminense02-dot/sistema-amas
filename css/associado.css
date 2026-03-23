@@ -156,7 +156,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-sm); 
   transition: var(--transition);
 }
 .stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
@@ -165,9 +165,32 @@
 .stat-card.yellow { border-left: 4px solid var(--status-analise); }
 .stat-card.blue  { border-left: 4px solid var(--azul-mid); }
 .stat-card.orange { border-left: 4px solid var(--status-revisao); }
-.sc-icon { font-size: 2rem; }
-.sc-val  { font-size: 1.6rem; font-weight: 800; font-family: var(--font-display); color: var(--text-primary); }
-.sc-lab  { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+.sc-val { 
+  font-family: 'Inter', sans-serif; 
+  font-size: 1.8rem; 
+  font-weight: 700; 
+  color: var(--text-primary); 
+  letter-spacing: -0.03em; /* Ajuste para números grandes */
+  line-height: 1;
+  font-variant-numeric: tabular-nums; /* Mantém os números alinhados lateralmente */
+}
+
+.sc-lab { 
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem; 
+  font-weight: 500;
+  color: var(--text-muted); 
+  margin-top: 4px;
+  text-transform: uppercase; /* Deixa o rótulo com aspecto de sistema profissional */
+  letter-spacing: 0.05em;
+}
+
+.sc-icon { 
+  font-size: 2rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* ── Charts grid ───────────────────────────────────── */
 .charts-grid {
